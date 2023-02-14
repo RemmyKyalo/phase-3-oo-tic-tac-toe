@@ -109,10 +109,10 @@ describe './lib/tic_tac_toe.rb' do
         game.instance_variable_set(:@board, board)
 
         index = 0
-        expect(game.valid_move?(index)).to be_truthy
+        expect(game.valid_move?(index)).to be_falsey
 
         index = 4
-        expect(game.valid_move?(index)).to be_falsey
+        expect(game.valid_move?(index)).to be_truthy
       end
 
       it 'checks that the attempted move is within the bounds of the game board' do
